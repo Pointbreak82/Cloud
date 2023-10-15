@@ -71,18 +71,9 @@
     </div>
 
     <div class="container" id="home">
-        <h2>Select a Cloud Service:</h2>
         <div class="box" onclick="showOptions('google-cloud')">Google Cloud (GCP)</div>
         <div class="box" onclick="showOptions('amazon-web-services')">Amazon Web Services (AWS)</div>
         <div class="box" onclick="showOptions('microsoft-azure')">Microsoft Azure</div>
-    </div>
-
-    <div class="container content" id="ai-ml-visualization-selection">
-        <h2>Select a Tool Category:</h2>
-        <div class="box" onclick="showService('ai')">AI Tools</div>
-        <div class="box" onclick="showService('ml')">ML Tools</div>
-        <div class="box" onclick="showService('visualization')">Data Visualization Tools</div>
-        <div class="box" onclick="goHome()">Home</div>
     </div>
 
     <div class="container content" id="google-cloud">
@@ -113,7 +104,6 @@
                 <li>Google Cloud Data Catalog: This tool helps organizations discover, manage, and understand their data assets. While not primarily a visualization tool, it plays a crucial role in data governance and cataloging, which is essential for data visualization.</li>
             </ul>
         </div>
-        <div class="box" onclick="goHome()">Home</div>
     </div>
 
     <div class="container content" id="amazon-web-services">
@@ -122,8 +112,9 @@
             <h3>AI Services in AWS:</h3>
             <ul>
                 <li>Amazon SageMaker: A fully managed service for building, training, and deploying machine learning models. It offers a Jupyter notebook-based environment for data scientists and includes pre-built algorithms and model tuning capabilities.</li>
-                <li>AWS Deep Learning AMIs: Amazon Machine Images (AMIs) with deep learning
-                    </ul>
+                <li>AWS Deep Learning AMIs: Amazon Machine Images (AMIs) with deep learning frameworks pre-installed. These AMIs make it easy to get started with deep learning on EC2 instances.</li>
+                <li>Amazon Rekognition: A service for image and video analysis, providing capabilities like facial recognition, object detection, and sentiment analysis.</li>
+            </ul>
         </div>
 
         <div class="content">
@@ -143,7 +134,6 @@
                 <li>Tableau: While not directly an AWS service, Tableau is often used in conjunction with AWS for data visualization. AWS offers integrations and connectors to make the process seamless.</li>
             </ul>
         </div>
-        <div class="box" onclick="goHome()">Home</div>
     </div>
 
     <div class="container content" id="microsoft-azure">
@@ -151,8 +141,8 @@
         <div class="content">
             <h3>AI Services in Azure:</h3>
             <ul>
-                <li>Azure Machine Learning: A cloud-based service for building, training, and deploying machine learning models.</li>
-                <li>Azure Cognitive Services: A collection of pre-built APIs for vision, speech, language, and decision-making.</li>
+                <li>Azure Machine Learning: A cloud-based service for building, training, and deploying machine learning models. It supports a variety of frameworks and tools and provides automated machine learning capabilities.</li>
+                <li>Azure Cognitive Services: A collection of pre-built APIs for vision, speech, language, and decision-making. It includes services like Computer Vision, Speech Recognition, and Language Understanding.</li>
                 <li>Azure Databricks: A fast, easy, and collaborative Apache Spark-based analytics platform. While not purely AI, it's often used for big data and machine learning tasks.</li>
             </ul>
         </div>
@@ -174,32 +164,12 @@
                 <li>QlikView and Qlik Sense: Qlik is another data visualization and business intelligence platform that can connect to Azure data sources and offer powerful visualization capabilities.</li>
             </ul>
         </div>
-        <div class="box" onclick="goHome()">Home</div>
     </div>
 
     <script>
         function showOptions(service) {
             document.getElementById('home').style.display = 'none';
-            document.getElementById('ai-ml-visualization-selection').style.display = 'block';
-        }
-
-        function showService(serviceType) {
-            document.getElementById('ai-ml-visualization-selection').style.display = 'none';
-            if (serviceType === 'ai') {
-                document.getElementById('google-cloud').style.display = 'block';
-            } else if (serviceType === 'ml') {
-                document.getElementById('amazon-web-services').style display = 'block';
-            } else if (serviceType === 'visualization') {
-                document.getElementById('microsoft-azure').style.display = 'block';
-            }
-        }
-
-        function goHome() {
-            document.getElementById('home').style.display = 'block';
-            document.getElementById('ai-ml-visualization-selection').style.display = 'none';
-            document.getElementById('google-cloud').style.display = 'none';
-            document.getElementById('amazon-web-services').style.display = 'none';
-            document.getElementById('microsoft-azure').style.display = 'none';
+            document.getElementById(service).style.display = 'block';
         }
     </script>
 </body>
