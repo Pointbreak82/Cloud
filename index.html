@@ -27,8 +27,7 @@
         }
 
         .box {
-            display: inline-block;
-            width: calc(33.33% - 20px);
+            width: calc(33.33% - 40px);
             margin: 10px;
             padding: 20px;
             background-color: #f0f0f0; /* Light gray boxes */
@@ -36,12 +35,13 @@
             border-radius: 10px;
             text-align: center;
             cursor: pointer;
-            transition: background-color 0.2s, color 0.2s; /* Smooth hover effect */
+            transition: background-color 0.2s, color 0.2s, box-shadow 0.2s; /* Smooth hover effect */
         }
 
         .box:hover {
             background-color: #3498db; /* Blue on hover */
             color: #fff; /* White text on hover */
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Slight shadow on hover */
         }
 
         ul {
@@ -57,20 +57,15 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for elegance */
         }
 
-        .content ul {
-            list-style: disc;
-            padding-left: 20px;
-        }
-
         .point-box {
-            display: inline-block;
-            width: calc(30% - 20px);
+            width: calc(30% - 40px);
             margin: 10px;
             padding: 10px;
             background-color: #f0f0f0; /* Light gray boxes */
             border: 1px solid #ccc;
             border-radius: 10px;
             text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for elegance */
         }
     </style>
 </head>
@@ -82,9 +77,15 @@
     </div>
 
     <div class="container" id="home">
-        <div class="box" onclick="showOptions('google-cloud')">Google Cloud (GCP)</div>
-        <div class="box" onclick="showOptions('amazon-web-services')">Amazon Web Services (AWS)</div>
-        <div class="box" onclick="showOptions('microsoft-azure')">Microsoft Azure</div>
+        <div class="box" onclick="showOptions('google-cloud')">
+            <h3>Google Cloud (GCP)</h3>
+        </div>
+        <div class="box" onclick="showOptions('amazon-web-services')">
+            <h3>Amazon Web Services (AWS)</h3>
+        </div>
+        <div class="box" onclick="showOptions('microsoft-azure')">
+            <h3>Microsoft Azure</h3>
+        </div>
     </div>
 
     <div class="container content" id="google-cloud">
@@ -93,44 +94,45 @@
         <div class="content" id="google-cloud-ai">
             <h3>AI Services in Google Cloud:</h3>
             <div class="point-box">
-                Google AI Platform: This is a comprehensive service for building, training, and deploying machine learning models. It provides tools and services for data preparation, model training, and deployment, making it easy to manage the entire ML lifecycle.
+                <p>Google AI Platform: This is a comprehensive service for building, training, and deploying machine learning models. It provides tools and services for data preparation, model training, and deployment, making it easy to manage the entire ML lifecycle.</p>
             </div>
             <div class="point-box">
-                Cloud AutoML: A suite of services that allows developers with limited machine learning expertise to build high-quality custom machine learning models. It includes AutoML Vision, Natural Language, and Tables, among others.
+                <p>Cloud AutoML: A suite of services that allows developers with limited machine learning expertise to build high-quality custom machine learning models. It includes AutoML Vision, Natural Language, and Tables, among others.</p>
             </div>
             <div class="point-box">
-                AI Hub: A centralized repository for sharing and discovering machine learning pipelines, notebooks, and other assets. It facilitates collaboration among data scientists and machine learning engineers.
+                <p>AI Hub: A centralized repository for sharing and discovering machine learning pipelines, notebooks, and other assets. It facilitates collaboration among data scientists and machine learning engineers.</p>
             </div>
         </div>
 
         <div class="content" id="google-cloud-ml">
             <h3>ML Services in Google Cloud:</h3>
             <div class="point-box">
-                BigQuery ML: Integrates machine learning into Google BigQuery, allowing you to create, evaluate, and deploy machine learning models using SQL. It's great for large-scale data analytics and predictive modeling.
+                <p>BigQuery ML: Integrates machine learning into Google BigQuery, allowing you to create, evaluate, and deploy machine learning models using SQL. It's great for large-scale data analytics and predictive modeling.</p>
             </div>
             <div class="point-box">
-                AI Building Blocks: A set of pre-trained models and APIs for specific tasks like Vision, Speech, Video, and Translation. These services make it easy to integrate AI capabilities into applications.
+                <p>AI Building Blocks: A set of pre-trained models and APIs for specific tasks like Vision, Speech, Video, and Translation. These services make it easy to integrate AI capabilities into applications.</p>
             </div>
             <div class="point-box">
-                Cloud Dataflow: A fully managed stream and batch data processing service that can be used for building, training, and deploying ML models with the help of Apache Beam.
+                <p>Cloud Dataflow: A fully managed stream and batch data processing service that can be used for building, training, and deploying ML models with the help of Apache Beam.</p>
             </div>
         </div>
 
         <div class="content" id="google-cloud-vis">
             <h3>Cloud-Based Visualization Tool in Google Cloud:</h3>
             <div class="point-box">
-                Google Data Studio: A free and powerful business intelligence and data visualization tool. It enables users to create interactive and shareable reports and dashboards that can be customized with data from various sources, including Google Cloud services.
+                <p>Google Data Studio: A free and powerful business intelligence and data visualization tool. It enables users to create interactive and shareable reports and dashboards that can be customized with data from various sources, including Google Cloud services.</p>
             </div>
             <div class="point-box">
-                Looker: An enterprise-level data exploration and business intelligence tool that is now part of Google Cloud. It allows you to build and share reports and dashboards.
+                <p>Looker: An enterprise-level data exploration and business intelligence tool that is now part of Google Cloud. It allows you to build and share reports and dashboards.</p>
             </div>
             <div class="point-box">
-                Google Cloud Data Catalog: This tool helps organizations discover, manage, and understand their data assets. While not primarily a visualization tool, it plays a crucial role in data governance and cataloging, which is essential for data visualization.
+                <p>Google Cloud Data Catalog: This tool helps organizations discover, manage, and understand their data assets. While not primarily a visualization tool, it plays a crucial role in data governance and cataloging, which is essential for data visualization.</p>
             </div>
         </div>
     </div>
 
-    <div class="container content" id="amazon-web-services">
+    <!-- Add content for AWS and Microsoft Azure here -->
+<div class="container content" id="amazon-web-services">
         <h2>Amazon Web Services (AWS)</h2>
         <div class="content" id="amazon-web-services-ai">
             <h3>AI Services in AWS:</h3>
@@ -213,7 +215,6 @@
             </div>
         </div>
     </div>
-
     <script>
         function showOptions(service) {
             document.getElementById('home').style.display = 'none';
@@ -221,7 +222,7 @@
         }
 
         function goHome() {
-            document.getElementById('home').style.display = 'block';
+            document.getElementById('home').style display = 'block';
             document.getElementById('google-cloud').style.display = 'none';
             document.getElementById('amazon-web-services').style.display = 'none';
             document.getElementById('microsoft-azure').style.display = 'none';
