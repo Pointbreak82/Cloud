@@ -61,6 +61,17 @@
             list-style: disc;
             padding-left: 20px;
         }
+
+        .point-box {
+            display: inline-block;
+            width: calc(30% - 20px);
+            margin: 10px;
+            padding: 10px;
+            background-color: #f0f0f0; /* Light gray boxes */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: left;
+        }
     </style>
 </head>
 
@@ -81,91 +92,41 @@
 
         <div class="content" id="google-cloud-ai">
             <h3>AI Services in Google Cloud:</h3>
-            <ul>
-                <li>Google AI Platform: This is a comprehensive service for building, training, and deploying machine learning models. It provides tools and services for data preparation, model training, and deployment, making it easy to manage the entire ML lifecycle.</li>
-                <li>Cloud AutoML: A suite of services that allows developers with limited machine learning expertise to build high-quality custom machine learning models. It includes AutoML Vision, Natural Language, and Tables, among others.</li>
-                <li>AI Hub: A centralized repository for sharing and discovering machine learning pipelines, notebooks, and other assets. It facilitates collaboration among data scientists and machine learning engineers.</li>
-            </ul>
+            <div class="point-box">
+                Google AI Platform: This is a comprehensive service for building, training, and deploying machine learning models. It provides tools and services for data preparation, model training, and deployment, making it easy to manage the entire ML lifecycle.
+            </div>
+            <div class="point-box">
+                Cloud AutoML: A suite of services that allows developers with limited machine learning expertise to build high-quality custom machine learning models. It includes AutoML Vision, Natural Language, and Tables, among others.
+            </div>
+            <div class="point-box">
+                AI Hub: A centralized repository for sharing and discovering machine learning pipelines, notebooks, and other assets. It facilitates collaboration among data scientists and machine learning engineers.
+            </div>
         </div>
 
         <div class="content" id="google-cloud-ml">
             <h3>ML Services in Google Cloud:</h3>
-            <ul>
-                <li>BigQuery ML: Integrates machine learning into Google BigQuery, allowing you to create, evaluate, and deploy machine learning models using SQL. It's great for large-scale data analytics and predictive modeling.</li>
-                <li>AI Building Blocks: A set of pre-trained models and APIs for specific tasks like Vision, Speech, Video, and Translation. These services make it easy to integrate AI capabilities into applications.</li>
-                <li>Cloud Dataflow: A fully managed stream and batch data processing service that can be used for building, training, and deploying ML models with the help of Apache Beam.</li>
-            </ul>
+            <div class="point-box">
+                BigQuery ML: Integrates machine learning into Google BigQuery, allowing you to create, evaluate, and deploy machine learning models using SQL. It's great for large-scale data analytics and predictive modeling.
+            </div>
+            <div class="point-box">
+                AI Building Blocks: A set of pre-trained models and APIs for specific tasks like Vision, Speech, Video, and Translation. These services make it easy to integrate AI capabilities into applications.
+            </div>
+            <div class="point-box">
+                Cloud Dataflow: A fully managed stream and batch data processing service that can be used for building, training, and deploying ML models with the help of Apache Beam.
+            </div>
         </div>
 
         <div class="content" id="google-cloud-visualization">
             <h3>Cloud-Based Visualization Tool in Google Cloud:</h3>
-            <ul>
-                <li>Google Data Studio: A free and powerful business intelligence and data visualization tool. It enables users to create interactive and shareable reports and dashboards that can be customized with data from various sources, including Google Cloud services.</li>
-                <li>Looker: An enterprise-level data exploration and business intelligence tool that is now part of Google Cloud. It allows you to build and share reports and dashboards.</li>
-                <li>Google Cloud Data Catalog: This tool helps organizations discover, manage, and understand their data assets. While not primarily a visualization tool, it plays a crucial role in data governance and cataloging, which is essential for data visualization.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="container content" id="amazon-web-services">
-        <h2>Amazon Web Services (AWS)</h2>
-
-        <div class="content" id="amazon-web-services-ai">
-            <h3>AI Services in AWS:</h3>
-            <ul>
-                <li>Amazon SageMaker: A fully managed service for building, training, and deploying machine learning models. It offers a Jupyter notebook-based environment for data scientists and includes pre-built algorithms and model tuning capabilities.</li>
-                <li>AWS Deep Learning AMIs: Amazon Machine Images (AMIs) with deep learning frameworks pre-installed. These AMIs make it easy to get started with deep learning on EC2 instances.</li>
-                <li>Amazon Rekognition: A service for image and video analysis, providing capabilities like facial recognition, object detection, and sentiment analysis.</li>
-            </ul>
-        </div>
-
-        <div class="content" id="amazon-web-services-ml">
-            <h3>ML Services in AWS:</h3>
-            <ul>
-                <li>Amazon Machine Learning: A service that allows you to create machine learning models with no prior ML experience required. It's suitable for building predictive applications and recommendation systems.</li>
-                <li>AWS Glue: A fully managed extract, transform, and load (ETL) service that makes it easy to prepare and load data for analysis. It can be integrated with various ML services.</li>
-                <li>Amazon Personalize: Provides recommendations for content and products based on user behavior and preferences, making it a valuable tool for e-commerce and content platforms.</li>
-            </ul>
-        </div>
-
-        <div class="content" id="amazon-web-services-visualization">
-            <h3>Cloud-Based Visualization Tool in AWS:</h3>
-            <ul>
-                <li>Amazon QuickSight: A cloud-native business intelligence service for creating and publishing interactive dashboards. It can connect to various data sources, including those in AWS, for data visualization.</li>
-                <li>Amazon Quicksight ML Insights: Integrates machine learning with Amazon QuickSight for automated discovery of insights from your data.</li>
-                <li>Tableau: While not directly an AWS service, Tableau is often used in conjunction with AWS for data visualization. AWS offers integrations and connectors to make the process seamless.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="container content" id="microsoft-azure">
-        <h2>Microsoft Azure</h2>
-
-        <div class="content" id="microsoft-azure-ai">
-            <h3>AI Services in Azure:</h3>
-            <ul>
-                <li>Azure Machine Learning: A cloud-based service for building, training, and deploying machine learning models. It supports a variety of frameworks and tools and provides automated machine learning capabilities.</li>
-                <li>Azure Cognitive Services: A collection of pre-built APIs for vision, speech, language, and decision-making. It includes services like Computer Vision, Speech Recognition, and Language Understanding.</li>
-                <li>Azure Databricks: A fast, easy, and collaborative Apache Spark-based analytics platform. While not purely AI, it's often used for big data and machine learning tasks.</li>
-            </ul>
-        </div>
-
-        <div class="content" id="microsoft-azure-ml">
-            <h3>ML Services in Azure:</h3>
-            <ul>
-                <li>Azure Synapse Analytics (formerly SQL Data Warehouse): Combines big data and data warehousing into one unified platform. It can be used for data preparation and running machine learning models.</li>
-                <li>Azure Data Factory: A hybrid data integration service that allows you to create data-driven workflows for orchestrating and automating data movement and data transformation.</li>
-                <li>Azure HDInsight: A fully managed cloud service for big data analytics and machine learning. It supports various open-source analytics frameworks.</li>
-            </ul>
-        </div>
-
-        <div class="content" id="microsoft-azure-visualization">
-            <h3>Cloud-Based Visualization Tool in Azure:</h3>
-            <ul>
-                <li>Power BI: A powerful business analytics service for creating interactive reports and dashboards. It can connect to various data sources, including Azure services, for data visualization.</li>
-                <li>Tableau: Similar to AWS, Tableau can also be used in conjunction with Azure for data visualization.</li>
-                <li>QlikView and Qlik Sense: Qlik is another data visualization and business intelligence platform that can connect to Azure data sources and offer powerful visualization capabilities.</li>
-            </ul>
+            <div class="point-box">
+                Google Data Studio: A free and powerful business intelligence and data visualization tool. It enables users to create interactive and shareable reports and dashboards that can be customized with data from various sources, including Google Cloud services.
+            </div>
+            <div class="point-box">
+                Looker: An enterprise-level data exploration and business intelligence tool that is now part of Google Cloud. It allows you to build and share reports and dashboards.
+            </div>
+            <div class="point-box">
+                Google Cloud Data Catalog: This tool helps organizations discover, manage, and understand their data assets. While not primarily a visualization tool, it plays a crucial role in data governance and cataloging, which is essential for data visualization.
+            </div>
         </div>
     </div>
 
