@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Choose: AI/ML or Data Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        p {
+            margin: 0 0 20px;
+        }
+        .cloud-services, .visualization-tools {
+            display: none;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #FFF;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose: AI/ML or Data Visualization</h1>
+
+        <button class="button" onclick="showAIService()">AI/ML Services</button>
+        <button class="button" onclick="showVisualizationTools()">Data Visualization Tools</button>
+
+        <div class="cloud-services">
+            <h2>AI and ML Services</h2>
+            <p><strong>Microsoft Azure:</strong> Azure provides a range of AI and ML services, including Azure Machine Learning and Azure Cognitive Services.</p>
+            <p><strong>AWS:</strong> Amazon Web Services offers Amazon SageMaker and various AI services such as Rekognition.</p>
+            <p><strong>Google Cloud Platform:</strong> GCP offers AI Platform, Cloud AI APIs, and more.</p>
+        </div>
+
+        <div class="visualization-tools">
+            <h2>Cloud-Based Visualization Tools</h2>
+            <p><strong>Microsoft Azure:</strong> Power BI is a popular data visualization tool by Microsoft.</p>
+            <p><strong>AWS:</strong> Amazon QuickSight is AWS's cloud-based business intelligence and data visualization service.</p>
+            <p><strong>Google Cloud Platform:</strong> Google Data Studio is a free, cloud-based data visualization tool.</p>
+        </div>
+    </div>
+
+    <script>
+        function showAIService() {
+            document.querySelector('.cloud-services').style.display = 'block';
+            document.querySelector('.visualization-tools').style.display = 'none';
+        }
+
+        function showVisualizationTools() {
+            document.querySelector('.cloud-services').style.display = 'none';
+            document.querySelector('.visualization-tools').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
