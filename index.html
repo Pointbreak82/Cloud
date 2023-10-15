@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Cloud Services for AI, ML, and Visualization</title>
+    <title>Cloud Services for AI, ML, and Data Visualization</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -47,11 +48,26 @@
             list-style: none;
             padding-left: 0;
         }
+
+        .content {
+            display: none;
+            background-color: #fff; /* White container background */
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for elegance */
+        }
+
+        .content ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
     </style>
 </head>
+
 <body>
     <div class="header">
-        <h1>Cloud Services for AI, ML, and Visualization</h1>
+        <h1>Cloud Services for AI, ML, and Data Visualization</h1>
         <p>In the rapidly evolving landscape of AI and ML, cloud environments have become indispensable platforms for businesses and developers. Leading cloud service providers such as Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP) offer comprehensive AI and ML services. These cloud services provide access to powerful machine learning models, tools for data preprocessing, and scalable infrastructure for model training and deployment. Simultaneously, cloud-based visualization tools like Tableau Online and Power BI facilitate the presentation and interpretation of data insights, empowering organizations to make data-driven decisions. The seamless integration of AI and ML with cloud-based visualization tools offers a holistic solution for businesses to harness the full potential of their data, turning raw information into actionable intelligence with ease and efficiency.</p>
     </div>
 
@@ -62,83 +78,105 @@
         <div class="box" onclick="showOptions('microsoft-azure')">Microsoft Azure</div>
     </div>
 
-    <div class="container" id="ai-ml-visualization-selection" style="display: none;">
+    <div class="container content" id="ai-ml-visualization-selection">
         <h2>Select a Tool Category:</h2>
         <div class="box" onclick="showService('ai')">AI Tools</div>
         <div class="box" onclick="showService('ml')">ML Tools</div>
         <div class="box" onclick="showService('visualization')">Data Visualization Tools</div>
+        <div class="box" onclick="goHome()">Home</div>
     </div>
 
-    <div class="container" id="google-cloud" style="display: none;">
+    <div class="container content" id="google-cloud">
         <h2>Google Cloud (GCP)</h2>
-        <p>AI Services in Google Cloud:</p>
-        <ul>
-            <li>Google AI Platform: This is a comprehensive service for building, training, and deploying machine learning models.</li>
-            <li>Cloud AutoML: A suite of services that allows developers with limited machine learning expertise to build high-quality custom machine learning models.</li>
-            <li>AI Hub: A centralized repository for sharing and discovering machine learning pipelines, notebooks, and other assets.</li>
-        </ul>
+        <div class="content">
+            <p>AI Services in Google Cloud:</p>
+            <ul>
+                <li>Google AI Platform: This is a comprehensive service for building, training, and deploying machine learning models.</li>
+                <li>Cloud AutoML: A suite of services that allows developers with limited machine learning expertise to build high-quality custom machine learning models.</li>
+                <li>AI Hub: A centralized repository for sharing and discovering machine learning pipelines, notebooks, and other assets.</li>
+            </ul>
+        </div>
 
-        <p>ML Services in Google Cloud:</p>
-        <ul>
-            <li>BigQuery ML: Integrates machine learning into Google BigQuery.</li>
-            <li>AI Building Blocks: A set of pre-trained models and APIs for specific tasks like Vision, Speech, Video, and Translation.</li>
-            <li>Cloud Dataflow: A fully managed stream and batch data processing service.</li>
-        </ul>
+        <div class="content">
+            <p>ML Services in Google Cloud:</p>
+            <ul>
+                <li>BigQuery ML: Integrates machine learning into Google BigQuery.</li>
+                <li>AI Building Blocks: A set of pre-trained models and APIs for specific tasks like Vision, Speech, Video, and Translation.</li>
+                <li>Cloud Dataflow: A fully managed stream and batch data processing service.</li>
+            </ul>
+        </div>
 
-        <p>Cloud-Based Visualization Tool in Google Cloud:</p>
-        <ul>
-            <li>Google Data Studio: A free and powerful business intelligence and data visualization tool.</li>
-            <li>Looker: An enterprise-level data exploration and business intelligence tool.</li>
-            <li>Google Cloud Data Catalog: This tool helps organizations discover, manage, and understand their data assets.</li>
-        </ul>
+        <div class="content">
+            <p>Cloud-Based Visualization Tool in Google Cloud:</p>
+            <ul>
+                <li>Google Data Studio: A free and powerful business intelligence and data visualization tool.</li>
+                <li>Looker: An enterprise-level data exploration and business intelligence tool.</li>
+                <li>Google Cloud Data Catalog: This tool helps organizations discover, manage, and understand their data assets.</li>
+            </ul>
+        </div>
+        <div class="box" onclick="goHome()">Home</div>
     </div>
 
-    <div class="container" id="amazon-web-services" style="display: none;">
+    <div class="container content" id="amazon-web-services">
         <h2>Amazon Web Services (AWS)</h2>
-        <p>AI Services in AWS:</p>
-        <ul>
-            <li>Amazon SageMaker: A fully managed service for building, training, and deploying machine learning models.</li>
-            <li>AWS Deep Learning AMIs: Amazon Machine Images (AMIs) with deep learning frameworks pre-installed.</li>
-            <li>Amazon Rekognition: A service for image and video analysis.</li>
-        </ul>
+        <div class="content">
+            <p>AI Services in AWS:</p>
+            <ul>
+                <li>Amazon SageMaker: A fully managed service for building, training, and deploying machine learning models.</li>
+                <li>AWS Deep Learning AMIs: Amazon Machine Images (AMIs) with deep learning frameworks pre-installed.</li>
+                <li>Amazon Rekognition: A service for image and video analysis.</li>
+            </ul>
+        </div>
 
-        <p>ML Services in AWS:</p>
-        <ul>
-            <li>Amazon Machine Learning: A service that allows you to create machine learning models with no prior ML experience required.</li>
-            <li>AWS Glue: A fully managed extract, transform, and load (ETL) service.</li>
-            <li>Amazon Personalize: Provides recommendations for content and products based on user behavior and preferences.</li>
-        </ul>
+        <div class="content">
+            <p>ML Services in AWS:</p>
+            <ul>
+                <li>Amazon Machine Learning: A service that allows you to create machine learning models with no prior ML experience required.</li>
+                <li>AWS Glue: A fully managed extract, transform, and load (ETL) service.</li>
+                <li>Amazon Personalize: Provides recommendations for content and products based on user behavior and preferences.</li>
+            </ul>
+        </div>
 
-        <p>Cloud-Based Visualization Tool in AWS:</p>
-        <ul>
-            <li>Amazon QuickSight: A cloud-native business intelligence service.</li>
-            <li>Amazon Quicksight ML Insights: Integrates machine learning with Amazon QuickSight for automated discovery of insights.</li>
-            <li>Tableau: While not directly an AWS service, Tableau is often used in conjunction with AWS for data visualization.</li>
-        </ul>
+        <div class="content">
+            <p>Cloud-Based Visualization Tool in AWS:</p>
+            <ul>
+                <li>Amazon QuickSight: A cloud-native business intelligence service.</li>
+                <li>Amazon Quicksight ML Insights: Integrates machine learning with Amazon QuickSight.</li>
+                <li>Tableau: While not directly an AWS service, Tableau is often used in conjunction with AWS for data visualization.</li>
+            </ul>
+        </div>
+        <div class="box" onclick="goHome()">Home</div>
     </div>
 
-    <div class="container" id="microsoft-azure" style="display: none;">
+    <div class="container content" id="microsoft-azure">
         <h2>Microsoft Azure</h2>
-        <p>AI Services in Azure:</p>
-        <ul>
-            <li>Azure Machine Learning: A cloud-based service for building, training, and deploying machine learning models.</li>
-            <li>Azure Cognitive Services: A collection of pre-built APIs for vision, speech, language, and decision-making.</li>
-            <li>Azure Databricks: A fast, easy, and collaborative Apache Spark-based analytics platform.</li>
-        </ul>
+        <div class="content">
+            <p>AI Services in Azure:</p>
+            <ul>
+                <li>Azure Machine Learning: A cloud-based service for building, training, and deploying machine learning models.</li>
+                <li>Azure Cognitive Services: A collection of pre-built APIs for vision, speech, language, and decision-making.</li>
+                <li>Azure Databricks: A fast, easy, and collaborative Apache Spark-based analytics platform.</li>
+            </ul>
+        </div>
 
-        <p>ML Services in Azure:</p>
-        <ul>
-            <li>Azure Synapse Analytics (formerly SQL Data Warehouse): Combines big data and data warehousing into one unified platform.</li>
-            <li>Azure Data Factory: A hybrid data integration service for data-driven workflows.</li>
-            <li>Azure HDInsight: A fully managed cloud service for big data analytics and machine learning.</li>
-        </ul>
+        <div class="content">
+            <p>ML Services in Azure:</p>
+            <ul>
+                <li>Azure Synapse Analytics (formerly SQL Data Warehouse): Combines big data and data warehousing into one unified platform.</li>
+                <li>Azure Data Factory: A hybrid data integration service for data-driven workflows.</li>
+                <li>Azure HDInsight: A fully managed cloud service for big data analytics and machine learning.</li>
+            </ul>
+        </div>
 
-        <p>Cloud-Based Visualization Tool in Azure:</p>
-        <ul>
-            <li>Power BI: A powerful business analytics service for creating interactive reports and dashboards.</li>
-            <li>Tableau: Similar to AWS, Tableau can also be used in conjunction with Azure for data visualization.</li>
-            <li>QlikView and Qlik Sense: Qlik is another data visualization and business intelligence platform.</li>
-        </ul>
+        <div class="content">
+            <p>Cloud-Based Visualization Tool in Azure:</p>
+            <ul>
+                <li>Power BI: A powerful business analytics service for creating interactive reports and dashboards.</li>
+                <li>Tableau: Similar to AWS, Tableau can also be used in conjunction with Azure for data visualization.</li>
+                <li>QlikView and Qlik Sense: Qlik is another data visualization and business intelligence platform.</li>
+            </ul>
+        </div>
+        <div class="box" onclick="goHome()">Home</div>
     </div>
 
     <script>
@@ -152,11 +190,20 @@
             if (serviceType === 'ai') {
                 document.getElementById('google-cloud').style.display = 'block';
             } else if (serviceType === 'ml') {
-                document.getElementById('amazon-web-services').style.display = 'block';
+                document.getElementById('amazon-web-services').style display = 'block';
             } else if (serviceType === 'visualization') {
                 document.getElementById('microsoft-azure').style.display = 'block';
             }
         }
+
+        function goHome() {
+            document.getElementById('home').style.display = 'block';
+            document.getElementById('ai-ml-visualization-selection').style.display = 'none';
+            document.getElementById('google-cloud').style.display = 'none';
+            document.getElementById('amazon-web-services').style.display = 'none';
+            document.getElementById('microsoft-azure').style.display = 'none';
+        }
     </script>
 </body>
+
 </html>
