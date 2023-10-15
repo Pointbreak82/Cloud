@@ -50,7 +50,6 @@
         }
 
         .content {
-            display: none;
             background-color: #fff; /* White container background */
             margin: 20px;
             padding: 20px;
@@ -123,9 +122,8 @@
             <h3>AI Services in AWS:</h3>
             <ul>
                 <li>Amazon SageMaker: A fully managed service for building, training, and deploying machine learning models. It offers a Jupyter notebook-based environment for data scientists and includes pre-built algorithms and model tuning capabilities.</li>
-                <li>AWS Deep Learning AMIs: Amazon Machine Images (AMIs) with deep learning frameworks pre-installed. These AMIs make it easy to get started with deep learning on EC2 instances.</li>
-                <li>Amazon Rekognition: A service for image and video analysis, providing capabilities like facial recognition, object detection, and sentiment analysis.</li>
-            </ul>
+                <li>AWS Deep Learning AMIs: Amazon Machine Images (AMIs) with deep learning
+                    </ul>
         </div>
 
         <div class="content">
@@ -190,7 +188,7 @@
             if (serviceType === 'ai') {
                 document.getElementById('google-cloud').style.display = 'block';
             } else if (serviceType === 'ml') {
-                document.getElementById('amazon-web-services').style.display = 'block';
+                document.getElementById('amazon-web-services').style display = 'block';
             } else if (serviceType === 'visualization') {
                 document.getElementById('microsoft-azure').style.display = 'block';
             }
